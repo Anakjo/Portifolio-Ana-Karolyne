@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*modo claro*/
+body {
+    font-family: sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/*modo escuro*/
+body.modo-escuro {
+    background-color: #121212;
+    color: #fafafa;
+}
+
+/*menu*/
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    background-color: #333;
+}
+
+nav a {
+    color: #fafafa; /*letras no menu*/
+    margin: 40px;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/*menu modo escuro*/
+body.modo-escuro nav {
+    background-color: #fafafa;
+}
+
+body.modo-escuro nav a {
+    color: #333;
+}
+
+/*separar seções*/
+section {
+    min-height: 100vh; /*100% da tela */
+    padding: 80px 20px /*desguda o topo e laterais*/
+}
+
+#sobreMim {
+    text-align: center;
+    margin: auto;
+}
+
+#sobreMim ul {
+    list-style-type: none; /*retira bolinhas da lista*/
+}
+
+#formacao {
+    text-align: center;
+    margin: auto;
+}
+
+#formacao ul {
+    list-style-type: none; /*retira bolinhas da lista*/
+}
+
+#portfolio {
+    text-align: center;
+    margin: auto;
+}
+
+#portfolio div {
+    border: 2px #121212 solid;
+    padding: 10px 20px;
+    margin: 40px;
+    width: 300px;
+    display: inline-block;
+}
+
+body.modo-escuro #portfolio div {
+    background-color: #fafafa;
+}
+
+#contato {
+    text-align: center;
+    margin: auto;
+}
