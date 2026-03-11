@@ -25,15 +25,36 @@ nav {
     width: 100%;
     top: 0%;
     background-color: #333;
+    padding: 10px 0;
     z-index: 9999; /*pra não clipar com os box debaixo no scroll*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
     color: #fafafa; /*letras dos links no menu*/
-    margin: 40px;
+    margin: 0 10px;
     text-align: center;
     padding: 10px 20px;
     text-decoration: none;
+}
+
+nav button { /*botão de alterar tema*/
+    width: auto;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    border: 2px solid #121212;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+nav button:active { /*clique no botão*/
+    transform: scale(0.95);
+    background-color: #f0f4f3;
 }
 
 /*menu modo escuro*/
@@ -178,6 +199,7 @@ section {
 
 #portfolio div {
     border: 2px #121212 solid;
+    border-radius: 10px;
     padding: 10px 20px;
     margin: 40px;
     width: 300px;
