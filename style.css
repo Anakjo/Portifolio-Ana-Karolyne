@@ -32,10 +32,18 @@ body.modo-escuro section {
 }
 
 /*Ajusta os textos das listas e h2 no modo escuro*/
-body.modo-escuro h2,
-body.modo-escuro li,
-body.modo-escuro li::before {
+body.modo-escuro h2, 
+body.modo-escuro ul, 
+body.modo-escuro form, 
+body.modo-escuro .card-projeto {
+    background: #1e1e1e !important;
     color: #fafafa !important;
+    border-color: #444 !important;
+    box-shadow: 4px 13px 5px rgba(0,0,0,0.5) !important;
+}
+
+body.modo-escuro .container-projetos {
+    background: transparent !important;
 }
 
 /*Ajusta o formulário no modo escuro*/
@@ -46,19 +54,26 @@ body.modo-escuro textarea {
     border-color: #555 !important;
 }
 
-
 /*menu*/
 nav {
     position: fixed;
     width: 100%;
     top: 0%;
     background-color: #333;
-    padding: 10px 0;
+    padding: 10px 20px;
     z-index: 9999;
     /*pra não clipar com os box debaixo no scroll*/
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+#menuMobile {
+    display: none;
+}
+
+#linksMenu {
+    display: flex;
 }
 
 nav a {
@@ -88,6 +103,12 @@ nav button:active {
     transform: scale(0.95);
     background-color: #f0f4f3;
 }
+
+/* Ajuste no Modo Escuro para o menu */
+body.modo-escuro nav { background-color: #fafafa; }
+body.modo-escuro .menu-links { background-color: #fafafa; }
+body.modo-escuro .menu-links a { color: #333; }
+body.modo-escuro .btn-nav { background: #eee; color: #333; border-color: #333; }
 
 /*menu estulizado durante o modo escuro*/
 body.modo-escuro nav {
@@ -376,25 +397,20 @@ footer {
 }
 
 @media (max-width: 600px) {
-    nav {
-        flex-wrap: wrap;
-        /* Permite que os links ocupem mais de uma linha se faltar espaço */
-        padding: 5px;
+    #menuMobile {
+        display: block;} /* Mostra o botão ☰ */
+
+    #linksMenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
     }
 
-    nav a {
-        margin: 5px;
-        /* Diminui o espaço entre os links */
-        padding: 5px 10px;
-        /* Diminui o tamanho do "clique" */
-        font-size: 14px;
-        /* Diminui a letra no celular */
-    }
-
-    nav button {
-        margin: 5px auto;
-        /* Centraliza o botão de tema na linha de baixo se não couber */
-        font-size: 14px;
-        padding: 4px 10px;
+    #linksMenu.ativo {
+        display: flex; /*mostra os links quando você clica*/
     }
 }

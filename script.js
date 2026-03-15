@@ -1,3 +1,17 @@
+//menu
+const btnMenu = document.getElementById('menuMobile');
+const linksMenu = document.getElementById('linksMenu');
+
+btnMenu.addEventListener('click', () => {
+    linksMenu.classList.toggle('ativo');
+});
+
+//Fecha o menu ao clicar em um link
+linksMenu.addEventListener('click', () => {
+    linksMenu.classList.remove('ativo');
+});
+
+
 //botão do modo escuro
 
 const botaoEsc = document.getElementById ('tema_escuro');
