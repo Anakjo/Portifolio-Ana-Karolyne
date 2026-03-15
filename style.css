@@ -348,16 +348,21 @@ footer {
     text-align: center;
 }
 
-/*Media Query: responsividade de varias telas para dispositivos móveis*/
 @media (max-width: 600px) {
-    /* Faz seções de 550px ocuparem quase toda da tela */
-    section, .container, nav {
-        width: 95% !important;
-        margin: 10px auto;
+    nav {
+        flex-wrap: wrap; /* Permite que os links ocupem mais de uma linha se faltar espaço */
+        padding: 5px;
     }
 
-    nav {
-        flex-direction: column; /* No celular o menu um embaixo do outro */
-        padding: 10px;
+    nav a {
+        margin: 5px; /* Diminui o espaço entre os links */
+        padding: 5px 10px; /* Diminui o tamanho do "clique" */
+        font-size: 14px; /* Diminui a letra no celular */
+    }
+
+    nav button {
+        margin: 5px auto; /* Centraliza o botão de tema na linha de baixo se não couber */
+        font-size: 14px;
+        padding: 4px 10px;
     }
 }
