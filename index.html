@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <!--link pro css-->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!--Menu e links rápidos-->
     <nav>
@@ -27,7 +29,7 @@
             <li>Moradora de Colombo-PR.</li>
             <li>Atualmente estudando Python e Javascript.</li>
             <li>Interesses em literatura, escrita e jogos.</li>
-            <li>Gosto por back-end.</li>
+            <li>Foco em desenvolvimento back-end.</li>
         </ul>
     </section>
 
@@ -44,24 +46,37 @@
 
     <!--3:links de trabalhos realizados, projetos pessoais.-->
     <section id="portfolio">
-        <h2>Projetos:</h2>
-        <div class="projeto1">1</div>
-        <div class="projeto2">2</div>
-        <div class="projeto3">3</div>
+        <h2>Meus Projetos</h2>
+        <div class="container-projetos">
+            <a href="https://github.com/Anakjo/Gerador-de-senhas.git" target="_blank" class="card-projeto">
+                <h3>Gerador de Senhas</h3>
+                <p>Aplicação focada em segurança e manipulação de strings.</p>
+            </a>
+            <a href="https://github.com/Anakjo/Cronometro-digital.git" target="_blank" class="card-projeto">
+                <h3>Cronômetro</h3>
+                <p>Gestão de tempo com registro de voltas e DOM.</p>
+            </a>
+            <a href="https://github.com/Anakjo/to-do-list.git" target="_blank" class="card-projeto">
+                <h3>To-Do List</h3>
+                <p>Gerenciador de tarefas com criação dinâmica de elementos.</p>
+            </a>
+        </div>
     </section>
 
     <!--4:Formulário: nome, e-mail, mensagem.-->
     <section id="contato">
         <form action="" id="formulario">
-            <input type="text" id="texto" placeholder="Seu nome:">
+            <input type="text" id="nome" placeholder="Seu nome:">
             <input type="email" id="email" placeholder="Seu e-mail:">
-            <textarea id="area" placeholder="Sua mensagem:"></textarea>
+            <textarea id="mensagem" placeholder="Sua mensagem:"></textarea>
             <button id="enviar" type="submit">Enviar!</button>
         </form>
     </section>
+
+    <footer>
+        <p>© 2026 - Desenvolvido por Ana Karolyne de Jesus de Oliveira</p>
+    </footer>
+
     <!--link com js-->
     <script src="script.js"></script>
 </body>
-<footer>
-    <p>© 2026 - Desenvolvido por Ana Karolyne de Jesus de Oliveira</p>
-</footer>
